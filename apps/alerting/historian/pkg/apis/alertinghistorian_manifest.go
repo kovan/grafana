@@ -451,6 +451,12 @@ var appManifestData = app.ManifestData{
 										Type: []string{"string"},
 									},
 								},
+								"ruleTitle": {
+									SchemaProps: spec.SchemaProps{
+										Type:        []string{"string"},
+										Description: "RuleTitle is returned if grouping by ruleUID.",
+									},
+								},
 								"ruleUID": {
 									SchemaProps: spec.SchemaProps{
 										Type: []string{"string"},
