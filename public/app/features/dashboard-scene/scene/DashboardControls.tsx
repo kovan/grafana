@@ -19,6 +19,7 @@ import {
   sceneUtils,
 } from '@grafana/scenes';
 import { Box, Button, useStyles2 } from '@grafana/ui';
+import { contextSrv } from 'app/core/services/context_srv';
 import { playlistSrv } from 'app/features/playlist/PlaylistSrv';
 import { ContextualNavigationPaneToggle } from 'app/features/scopes/dashboards/ContextualNavigationPaneToggle';
 
@@ -293,6 +294,8 @@ function DashboardControlActions({ dashboard }: { dashboard: DashboardScene }) {
   }
 
   const canEditDashboard = dashboard.canEditDashboard();
+  const canSave = Boolean(meta.canSave);
+  const canSaveAs = contextSrv.hasEditPermissionInFolders;
   const hasUid = Boolean(uid);
   const isSnapshot = Boolean(meta.isSnapshot);
   const isEmbedded = meta.isEmbedded;
@@ -302,7 +305,7 @@ function DashboardControlActions({ dashboard }: { dashboard: DashboardScene }) {
   return (
     <>
       {showShareButton && <ShareDashboardButton dashboard={dashboard} />}
-      {isEditing && <SaveDashboard dashboard={dashboard} />}
+      {isEditing && (canSave || canSaveAs) && <SaveDashboard dashboard={dashboard} />}
       {!isPlaying && canEditDashboard && isEditable && <EditDashboardSwitch dashboard={dashboard} />}
       {!isPlaying && canEditDashboard && !isEditable && !isEditing && (
         <MakeDashboardEditableButton dashboard={dashboard} />
