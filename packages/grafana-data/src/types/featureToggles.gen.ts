@@ -144,11 +144,6 @@ export interface FeatureToggles {
   */
   faroSessionReplay?: boolean;
   /**
-  * A table visualisation for logs in Explore
-  * @default true
-  */
-  logsExploreTableVisualisation?: boolean;
-  /**
   * Support temporary security credentials in AWS plugins for Grafana Cloud customers
   * @default true
   */

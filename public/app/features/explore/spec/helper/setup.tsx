@@ -50,6 +50,19 @@ import { QueriesDrawerContextProvider } from '../../QueriesDrawer/QueriesDrawerC
 
 import { mockData } from './mocks';
 
+const useBooleanFlagValueMock = jest.fn((_: string, defaultValue: boolean) => defaultValue);
+
+jest.mock('@openfeature/react-sdk', () => ({
+  ...jest.requireActual('@openfeature/react-sdk'),
+  useBooleanFlagValue: (flag: string, defaultValue: boolean) => useBooleanFlagValueMock(flag, defaultValue),
+}));
+
+export const setBooleanFlags = (flags: Record<string, boolean>) => {
+  useBooleanFlagValueMock.mockImplementation((flag: string, defaultValue: boolean) => {
+    return Object.prototype.hasOwnProperty.call(flags, flag) ? flags[flag] : defaultValue;
+  });
+};
+
 export const QueryLibraryMocks = {
   data: mockData.all,
 };
@@ -83,6 +96,8 @@ export function setupExplore(options?: SetupOptions): {
   container: HTMLElement;
   location: LocationService;
 } {
+  useBooleanFlagValueMock.mockImplementation((_: string, defaultValue: boolean) => defaultValue);
+
   const previousBackendSrv = getBackendSrv();
   setBackendSrv({
     datasourceRequest: jest.fn().mockRejectedValue(undefined),
