@@ -1,6 +1,6 @@
 import { OverrideProperties } from 'type-fest';
 
-import { RoutingTreeRoute } from '@grafana/api-clients/rtkq/notifications.alerting/v0alpha1';
+import { RoutingTreeRoute } from '@grafana/api-clients/rtkq/notifications.alerting/v1beta1';
 
 import { LabelMatcher } from '../matchers/types';
 

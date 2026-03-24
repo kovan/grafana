@@ -3,7 +3,7 @@ import {
   GetIntegrationtypeschemasIntegrationTypeSchema,
   GetIntegrationtypeschemasIntegrationTypeSchemaVersion,
   useGetIntegrationtypeschemasQuery,
-} from '@grafana/api-clients/rtkq/notifications.alerting/v0alpha1';
+} from '@grafana/api-clients/rtkq/notifications.alerting/v1beta1';
 import { config } from '@grafana/runtime';
 
 import { NotificationChannelOption, NotifierDTO, NotifierVersion } from '../types/alerting';

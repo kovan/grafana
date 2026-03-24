@@ -1,6 +1,6 @@
 import { ComponentProps, useMemo } from 'react';
 
-import { RoutingTree } from '@grafana/api-clients/rtkq/notifications.alerting/v0alpha1';
+import { RoutingTree } from '@grafana/api-clients/rtkq/notifications.alerting/v1beta1';
 import { t } from '@grafana/i18n';
 import { Alert, Combobox, ComboboxOption, MultiCombobox } from '@grafana/ui';
 

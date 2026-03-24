@@ -6,7 +6,7 @@ import {
   API_VERSION,
   ListRoutingTreeApiResponse,
   RoutingTree,
-} from '@grafana/api-clients/rtkq/notifications.alerting/v0alpha1';
+} from '@grafana/api-clients/rtkq/notifications.alerting/v1beta1';
 
 import { LabelMatcher } from '../../../../../matchers/types';
 import { DEFAULT_NAMESPACE, generateResourceVersion } from '../../../../../mocks/util';
