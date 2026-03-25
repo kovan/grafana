@@ -55,6 +55,7 @@ type QueryAPIBuilder struct {
 	legacyDatasourceLookup service.LegacyDataSourceLookup
 	connections            datasourceV0.DataSourceConnectionProvider
 	reportStatus           func(context.Context, int)
+	rawOutputMode          bool
 }
 
 func NewQueryAPIBuilder(
@@ -68,6 +69,8 @@ func NewQueryAPIBuilder(
 	connections datasourceV0.DataSourceConnectionProvider,
 	concurrentQueryLimit int,
 	reportStatus func(context.Context, int),
+	rawOutputMode bool,
+
 ) (*QueryAPIBuilder, error) {
 	// Include well typed query definitions
 	var queryTypes *datasourceV0.QueryTypeDefinitionList
@@ -102,6 +105,7 @@ func NewQueryAPIBuilder(
 		},
 		legacyDatasourceLookup: legacyDatasourceLookup,
 		reportStatus:           reportStatus,
+		rawOutputMode:          rawOutputMode,
 	}, nil
 }
 
@@ -162,6 +166,7 @@ func RegisterAPIService(
 		dataSourcesService, // datasourceV0.DataSourceConnectionProvider
 		cfg.SectionWithEnvOverrides("query").Key("concurrent_query_limit").MustInt(runtime.NumCPU()),
 		reportStatus,
+		false, // FIXME: connect to a feature-flag
 	)
 	apiregistration.RegisterAPI(builder)
 	return builder, err
