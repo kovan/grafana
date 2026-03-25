@@ -74,8 +74,8 @@ github.com/google/pprof v0.0.0-20260115054156-294ebfa9ad83 h1:z2ogiKUYzX5Is6zr/v
 github.com/google/pprof v0.0.0-20260115054156-294ebfa9ad83/go.mod h1:MxpfABSjhmINe3F1It9d+8exIHFvUqtLIRCdOGNXqiI=
 github.com/google/uuid v1.6.0 h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=
 github.com/google/uuid v1.6.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
-github.com/grafana/grafana-app-sdk v0.52.1 h1:zRSVZKnolIAU0VSM0aZnWh39bzkhecFwkfhREyPJiJc=
-github.com/grafana/grafana-app-sdk v0.52.1/go.mod h1:VNw5MbxQNqmM4mI5txSaW3/Jx6FNFfjbYEN8A/abvRE=
+github.com/grafana/grafana-app-sdk v0.52.2-0.20260325222717-a0fa7c22fa61 h1:kPovksZz3EWSzU9R/Z8JCj2/YVf6CTmrVlfeFvUyJ58=
+github.com/grafana/grafana-app-sdk v0.52.2-0.20260325222717-a0fa7c22fa61/go.mod h1:VNw5MbxQNqmM4mI5txSaW3/Jx6FNFfjbYEN8A/abvRE=
 github.com/grafana/grafana-app-sdk/logging v0.51.4 h1:gQrb4YZcGUTnmNtF4uM2IFX5Un0KUoLtbp3yOwNhL6s=
 github.com/grafana/grafana-app-sdk/logging v0.51.4/go.mod h1:RKAy6LaGkWcnmyq3JW+9C4v7TEicBXYllH8vtjsLnJk=
 github.com/grpc-ecosystem/grpc-gateway/v2 v2.28.0 h1:HWRh5R2+9EifMyIHV7ZV+MIZqgz+PMpZ14Jynv3O2Zs=
