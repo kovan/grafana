@@ -1750,4 +1750,9 @@ export interface FeatureToggles {
   * @default false
   */
   frontendServiceSSOAutoLogin?: boolean;
+  /**
+  * Enables heatmap visualization support for Pyroscope profiles
+  * @default false
+  */
+  profilesHeatmap?: boolean;
 }

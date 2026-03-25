@@ -345,3 +345,4 @@ Created,Name,Stage,Owner,requiresDevMode,RequiresRestart,FrontendOnly
 2026-02-19,logsTablePanelNG,experimental,@grafana/observability-logs,false,false,false
 2026-03-25,useMTPluginSettings,experimental,@grafana/grafana-frontend-platform,false,false,true
 2026-03-24,frontendServiceSSOAutoLogin,experimental,@grafana/grafana-frontend-platform,false,false,false
+2026-01-06,profilesHeatmap,experimental,@grafana/observability-traces-and-profiling,false,false,false
